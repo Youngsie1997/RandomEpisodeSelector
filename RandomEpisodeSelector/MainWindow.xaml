@@ -25,7 +25,8 @@
             <ComboBoxItem Content="Brooklyn Nine-Nine" Background="#00000000"/>
                 <ComboBoxItem Background="#00000000" Content="Community"/>
             <ComboBoxItem Content="Family Guy" Background="#00000000"/>
-            
+            <ComboBoxItem Content="New Girl"/>
+
 
         </ComboBox>
         <Button x:Name="randomButton" Content="Launch Random Episode" VerticalAlignment="Top" Margin="0,21.96,0,0" Background="#FF97CD4A" Click="randomButton_Click" Grid.ColumnSpan="2"/>

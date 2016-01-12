@@ -203,6 +203,27 @@ namespace RandomEpisodeSelector
                 }
             }
 
+            if (resCombo.Text == "New Girl")   //New Girl
+            {
+                tvShow = "new_girl";
+                tvSeason = resRandom.Next(1, 5); 
+                switch(tvSeason)
+                {
+                    case 1:
+                        tvEpisode = resRandom.Next(1, 25);
+                        break;
+                    case 2:
+                        tvEpisode = resRandom.Next(1, 26);
+                        break;
+                    case 3:
+                        tvEpisode = resRandom.Next(1, 24);
+                        break;
+                    case 4:
+                        tvEpisode = resRandom.Next(1, 23);
+                        break;
+                }
+            }
+
             if(tvShow != "" && tvEpisode != 0 && tvSeason != 0)
             {
                 Process.Start("http://thewatchseries.to/episode/"+tvShow+"_s"+tvSeason+"_e"+tvEpisode+".html");
