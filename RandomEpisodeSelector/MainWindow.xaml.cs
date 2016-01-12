@@ -19,7 +19,6 @@ using System.Windows.Threading;
 using System.Timers;
 using System.Text.RegularExpressions;
 
-
 namespace RandomEpisodeSelector
 {
     /// <summary>
@@ -35,10 +34,6 @@ namespace RandomEpisodeSelector
         bool timerFirst = true;
         Random resRandom = new Random();
         DispatcherTimer resTimer = new DispatcherTimer();
-        
-
-
-
         #endregion
           public MainWindow()
         {
@@ -53,10 +48,8 @@ namespace RandomEpisodeSelector
            
         }
 
-
         #region RandomEpisodeStuff
-
-        private void randomButton_Click(object sender, RoutedEventArgs e)
+        private void randomButton_Click(object sender, RoutedEventArgs e)   //Code behind for Random Episode Button, Generates season and episode number and then launches page
         {
 
             if (resCombo.SelectedIndex == -1)
@@ -148,7 +141,6 @@ namespace RandomEpisodeSelector
 
             }
 
-
             if (resCombo.Text == "Community") //Community 
             {
                 tvShow = "community";
@@ -216,35 +208,8 @@ namespace RandomEpisodeSelector
                 Process.Start("http://thewatchseries.to/episode/"+tvShow+"_s"+tvSeason+"_e"+tvEpisode+".html");
 
             }
-
-
-
         }  
-                
-            
-
-
-        
         #endregion
-
-
-      
-
-
-
-        
-
-        
-
-
-
-
-
-
-
-
-
-
 
         #region Shutdown Timer 
         private void resTimer_Tick(object sender, EventArgs e)   //Shutdown Timer tick if decreases the duration(inseconds) by 1 each time if it reaches 0 it shuts down
@@ -331,16 +296,6 @@ namespace RandomEpisodeSelector
         {
             e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
         }
-
-
-
-
-
-
-
-
-
-
         #endregion
 
         private void resIcon_TrayRightMouseDown(object sender, RoutedEventArgs e)
@@ -351,5 +306,3 @@ namespace RandomEpisodeSelector
         }
     }    
    }
-    
-
