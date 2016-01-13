@@ -17,7 +17,7 @@
 
 
 
-        <ComboBox x:Name="resCombo" VerticalAlignment="Top" SelectedIndex="0" Background="#FFFB8080" IsSynchronizedWithCurrentItem="True" Grid.ColumnSpan="2">
+        <ComboBox x:Name="resCombo" VerticalAlignment="Top" SelectedIndex="0" Background="#FFFB8080" IsSynchronizedWithCurrentItem="True" Grid.ColumnSpan="2" >
             <ComboBoxItem Content="Select a Tv Show"/>
             <ComboBoxItem Content="American Dad" Background="#00000000"/>
             <ComboBoxItem Content="Baby Daddy" Background="#00000000"/>
@@ -26,6 +26,7 @@
                 <ComboBoxItem Background="#00000000" Content="Community"/>
             <ComboBoxItem Content="Family Guy" Background="#00000000"/>
             <ComboBoxItem Content="New Girl"/>
+            <ComboBoxItem Content="The Simpsons"/>
 
 
         </ComboBox>

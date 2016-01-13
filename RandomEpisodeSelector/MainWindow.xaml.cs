@@ -224,6 +224,37 @@ namespace RandomEpisodeSelector
                 }
             }
 
+            if(resCombo.Text == "The Simpsons") //The Simpsons
+            {
+                tvShow = "the_simpsons";
+                tvSeason = resRandom.Next(1, 27);
+                switch(tvSeason)
+                {
+                    case 1:
+                        tvEpisode = resRandom.Next(1, 14);
+                        break;
+                    case 2: case 4: case 5: case 11: case 13: case 14: case 15: case 17: case 18: case 22: case 23: case 24: case 25: case 26:
+                        tvEpisode = resRandom.Next(1, 23);
+                        break;
+                    case 3:
+                        tvEpisode = resRandom.Next(1, 25);
+                        break;
+                    case 6: case 7: case 8: case 9:
+                        tvEpisode = resRandom.Next(1, 26);
+                        break;
+                    case 10: case 21:
+                        tvEpisode = resRandom.Next(1, 24);
+                        break;
+                    case 12: case 16: case 20:
+                        tvEpisode = resRandom.Next(1, 22);
+                        break;
+                    case 19:
+                        tvEpisode = resRandom.Next(1, 21);
+                        break;
+                }
+            }
+
+
             if(tvShow != "" && tvEpisode != 0 && tvSeason != 0)
             {
                 Process.Start("http://thewatchseries.to/episode/"+tvShow+"_s"+tvSeason+"_e"+tvEpisode+".html");
